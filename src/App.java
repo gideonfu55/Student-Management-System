@@ -102,7 +102,7 @@ public class App {
         Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
         } else {
             System.out.println("\nStudent found!");
             System.out.println(student);
@@ -130,7 +130,7 @@ public class App {
         Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
             return;
         }
 
@@ -182,7 +182,7 @@ public class App {
         Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
             return;
         }
 
@@ -317,7 +317,7 @@ public class App {
         Student student = studentService.findStudent(studentName, studentBirthDate);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
         } else {
             if (student.getPassedCourses().size() == 0) {
                 System.out.println(
