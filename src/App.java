@@ -57,7 +57,7 @@ public class App {
                 break;
             }
 
-        } 
+        }
         while (option < 8);
     }
 
