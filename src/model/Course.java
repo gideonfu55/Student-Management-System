@@ -20,6 +20,14 @@ public class Course {
         grade = 0.0;
     }
 
+    public Course(Course source) {
+        this.courseId = source.courseId;
+        this.name = source.name;
+        this.credits = source.credits;
+        this.module = source.module;
+        grade = 0.0;
+    }
+
     public String getCourseId() {
         return courseId;
     }

@@ -17,9 +17,17 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
         int option;
+
         do {
             MenuPrinter.showMainMenu();
+
+            while (!scanner.hasNextInt()) {
+                System.out.println("\nPlease enter a valid number between 1-8.");
+                scanner.next();
+            }
+
             option = scanner.nextInt();
+
             switch (option) {
                 case 1:
                     registerStudent(studentService, scanner, studentValidator);
@@ -45,10 +53,12 @@ public class App {
                 case 8:
                     System.exit(0);
                 default:
-                    System.out.println("\nPlease enter a valid option from 1-8\n");
-                    break;
+                System.out.println("\nPlease enter a valid option from 1-8\n");
+                break;
             }
-        } while (option < 8);
+
+        } 
+        while (option < 8);
     }
 
     /**
@@ -141,7 +151,7 @@ public class App {
 
         System.out.println("Course selected for enrollment: " + "\n" + course);
 
-        if (studentService.enrollToCourse(student.getName(), student.getBirthDate(), course)) {
+        if (studentService.enrollToCourse(student.getName(), student.getBirthDate(), new Course(course))) {
             System.out.println("\n" + student.getName() + " has been enrolled successfully to: \n<" + course.getCourseId() + "> " + course.getName());
         } else {
             System.out.println("Sorry, the course enrollment was unsuccessful.");
@@ -179,6 +189,11 @@ public class App {
         System.out.println("\nList of enrolled course(s): ");
         System.out.println(student.printEachCourse(student.getEnrolledCourses()));
 
+        if (student.getEnrolledCourses().size() == 0) {
+            System.out.println("\nThis Student is not enrolled in any course currently. Please enroll the student in a course before grading.");
+            return;
+        }
+
         System.out.println("\nList of ungraded course(s): ");
 
         int ungradedCourseCount = 0;
@@ -204,8 +219,7 @@ public class App {
         Course course = student.getEnrolledCourse(courseID);
 
         if (course == null) {
-            System.out.println(
-                    "\nThe student is not enrolled to this course currently. Please enroll student before selecting course to grade.");
+            System.out.println("\nThe student is not enrolled to this course currently. Please enroll student before selecting course to grade.");
             return;
         }
 
@@ -220,10 +234,11 @@ public class App {
             } else {
                 course.setGrade(grade);
                 System.out.println(
-                        "\nThe course has been graded successfully: \n"
-                                + "Student name: " + student.getName() + " - [ "
-                                + "Enrolled Course: " + course.getName() + " - "
-                                + "Grade received: " + course.getGrade() + " ]");
+                    "\nThe course has been graded successfully: \n"
+                    + "Student name: " + student.getName() + " - [ "
+                    + "Enrolled Course: " + course.getName() + " - "
+                    + "Grade received: " + course.getGrade() + " ]"
+                );
             }
 
         } else {

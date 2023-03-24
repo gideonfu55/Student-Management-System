@@ -54,7 +54,7 @@ public class Student extends Person implements Evaluation {
             allCourses += course.toString() + ", \n";
         };
         if (allCourses.isBlank()) {
-            allCourses += "None.";
+            allCourses += "None.\n";
         }
         return allCourses;
     }
@@ -65,7 +65,6 @@ public class Student extends Person implements Evaluation {
         + super.toString() 
         + "\nEnrolled Courses: \n" 
         + printEachCourse(getEnrolledCourses());
-
     }
 
 }
