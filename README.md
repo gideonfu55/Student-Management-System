@@ -5,9 +5,10 @@ Simple Student Management System project to manage student data, course enrollme
 Reworked on the Java Assessment which I had during my bootcamp to familiarize with concepts of OOP and make further improvements. Further things to work on:
 
 1. Update regex to validate email inputs for spaces during student registration.
-2. Add new courses to module and validate course.
-3. Add instructors with relationship to course.
-4. Expanding this into a Full-Stack project with security features.
+2. Include failed courses option (branched) within selection in Option 7.
+3. Add new courses to module and validate course.
+4. Add instructors with relationship to course.
+5. Expanding this into a Full-Stack project with security features.
 
 Things that I tried (hopefully) to improve on:
 
