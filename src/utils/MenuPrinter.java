@@ -78,5 +78,13 @@ public class MenuPrinter {
 
         return new Student(name, email, birthDate);
     }
+
+    public static void pressEnterToContinue() {
+        System.out.println("\nPress \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+
+        scanner.close();
+    }
     
 }

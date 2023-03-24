@@ -58,7 +58,7 @@ public class App {
             }
 
         }
-        while (option < 8);
+        while (option <= 8);
     }
 
     /**
@@ -223,7 +223,7 @@ public class App {
             return;
         }
 
-        System.out.println("\nInsert course grade [0.0 - 6.0] for " + course.getName() + ": ");
+        System.out.println("\nInsert course grade (1.0 to 6.0) for " + course.getName() + ": ");
 
         if (scanner.hasNextDouble()) {
             double grade = scanner.nextDouble();
@@ -267,9 +267,8 @@ public class App {
         }
 
         System.out.println("\nEnter any key to return to main menu");
-        if (scanner.next().equals("r")) {
-            return;
-        }
+        scanner.next();
+        // MenuPrinter.pressEnterToContinue();
 
     }
 
@@ -288,10 +287,9 @@ public class App {
         courseService.showSummary();
 
         System.out.println("\nEnter any key to return to main menu");
-        if (scanner.next().equals("r")) {
-            return;
-        }
+        scanner.next();
 
+        // MenuPrinter.pressEnterToContinue();
     }
 
     /**
