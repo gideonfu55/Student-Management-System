@@ -51,6 +51,7 @@ public class App {
                     showPassedCourses(studentService, scanner);
                     break;
                 case 8:
+                System.out.println("\nThank you for using StudentGen. Goodbye!\n");
                     System.exit(0);
                 default:
                 System.out.println("\nPlease enter a valid option from 1-8\n");
@@ -208,7 +209,7 @@ public class App {
             System.out.println("None. \nPlease select an enrolled course to be regraded if necessary.");
         }
 
-        System.out.print("\nEnter Course ID to be graded/regraded: \n");
+        System.out.println("\nEnter Course ID to be graded/regraded:");
         String courseID = scanner.next();
 
         if (courseService.getCourseById(courseID) == null) {
