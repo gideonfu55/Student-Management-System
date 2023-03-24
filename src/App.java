@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 import model.Course;
 import model.Student;
+import model.validator.PersonValidator;
 import service.CourseService;
 import service.StudentService;
 import utils.MenuPrinter;
-import validator.PersonValidator;
 
 public class App {
     public static void main(String[] args) throws ParseException, IllegalArgumentException {
@@ -135,20 +135,17 @@ public class App {
             System.out.println("\nInvalid Course ID entered.");
             return;
         } else if (student.getEnrolledCourse(courseId) != null) {
-            System.out.println(
-                    "\nSelected student is already enrolled in this course. Please select another course for enrollment.");
+            System.out.println("\nSelected student is already enrolled in this course. Please select another course for enrollment.");
             return;
         }
 
         System.out.println("Course selected for enrollment: " + "\n" + course);
 
         if (studentService.enrollToCourse(student.getName(), student.getBirthDate(), course)) {
-            System.out.println("\n" + student.getName() + " has been enrolled successfully to: \n<"
-                    + course.getCourseId() + "> " + course.getName());
+            System.out.println("\n" + student.getName() + " has been enrolled successfully to: \n<" + course.getCourseId() + "> " + course.getName());
         } else {
             System.out.println("Sorry, the course enrollment was unsuccessful.");
-        }
-        ;
+        };
 
     }
 

@@ -1,4 +1,4 @@
-package validator;
+package model.validator;
 
 import java.util.Date;
 

@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 import model.Student;
-import validator.PersonValidator;
+import model.validator.PersonValidator;
 
 public class MenuPrinter {
 
