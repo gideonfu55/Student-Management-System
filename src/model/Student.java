@@ -44,6 +44,14 @@ public class Student extends Person implements Evaluation {
     }
 
     @Override
+    public List<Course> getFailedCourses() {
+        return enrolledCourses
+        .stream()
+        .filter(course -> course.getGrade() < course.PASS_MIN_GRADE)
+        .toList();
+    }
+
+    @Override
     public List<Course> getEnrolledCourses() {
         return enrolledCourses;
     }

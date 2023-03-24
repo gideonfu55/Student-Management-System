@@ -149,7 +149,7 @@ public class App {
             return;
         }
 
-        System.out.println("Course selected for enrollment: " + "\n" + course);
+        System.out.println("\nCourse selected for enrollment: " + "\n" + course);
 
         if (studentService.enrollToCourse(student.getName(), student.getBirthDate(), new Course(course))) {
             System.out.println("\n" + student.getName() + " has been enrolled successfully to: \n<" + course.getCourseId() + "> " + course.getName());
@@ -242,7 +242,7 @@ public class App {
             }
 
         } else {
-            System.out.println("\nYour input not a number. Please enter a valid number for grade submission.");
+            System.out.println("\nYour input is not a number. Please enter a valid number for grade submission.");
             scanner.next();
         }
 
@@ -320,14 +320,12 @@ public class App {
             System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
         } else {
             if (student.getPassedCourses().size() == 0) {
-                System.out.println(
-                        "\nNo passed courses available. Please grade a course OR enroll student in a course for grading.");
+                System.out.println("\nNo passed courses available. Please grade a course OR enroll student in a course for grading.");
             } else {
                 System.out.println("\nList of courses " + student.getName() + " has passed: ");
                 System.out.println(student.printEachCourse(student.getPassedCourses()));
             }
         }
-
     }
 
     /**
