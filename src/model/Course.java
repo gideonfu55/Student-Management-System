@@ -62,7 +62,7 @@ public class Course {
             ", name='" + getName() + "'" +
             ", credits='" + getCredits() + "'" +
             ", module='" + getModule() + "'" +
-            ", \ngrade='" + getGrade() + "'" +
+            ", grade='" + getGrade() + "'" +
             " }";
     }
 
