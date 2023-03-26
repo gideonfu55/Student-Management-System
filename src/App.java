@@ -88,8 +88,7 @@ public class App {
      * (acting as the repository here).
      *
      */
-    private static void registerStudent(StudentService studentService, Scanner scanner,
-            PersonValidator studentValidator) throws ParseException {
+    private static void registerStudent(StudentService studentService, Scanner scanner, PersonValidator studentValidator) throws ParseException {
 
         Student student = MenuPrinter.createStudentMenu(scanner, studentValidator);
         studentService.subscribeStudent(student);
