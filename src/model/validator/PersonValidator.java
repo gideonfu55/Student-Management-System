@@ -23,8 +23,8 @@ public class PersonValidator {
   /**
    * emailValidator rejects email input on the following condition(s):
    * 1. Email is blank.
-   * 2. Email has white spaces.
-   * 3. Email has @ in entry - the domain is auto-injected for final save. 
+   * 2. Email has white spaces (still not included)
+   * 3. Email has @ in entry - the domain is auto-injected for final save. (currently based on checking if a @domain is entered instead)
    * 
    */
   public Boolean emailValidator(String email) {
