@@ -22,50 +22,53 @@ public class App {
             MenuPrinter.showMainMenu();
 
             while (!scanner.hasNextInt()) {
-                System.out.println("\nPlease enter a valid number between 1-8.");
+                System.out.println("Please enter a valid number between 1-8.");
                 scanner.next();
             }
 
             option = scanner.nextInt();
+            MenuPrinter.printMenuHeader(option);
 
             switch (option) {
+
                 case 1:
                     registerStudent(studentService, scanner, studentValidator);
                     break;
+
                 case 2:
-                    MenuPrinter.printMenuHeader(option);
                     printStudentRecord(studentService, scanner);
                     break;
+
                 case 3:
-                    MenuPrinter.printMenuHeader(option);
                     enrollCourse(studentService, courseService, scanner);
                     break;
+
                 case 4:
-                    MenuPrinter.printMenuHeader(option);
                     gradeStudent(studentService, courseService, scanner);
                     break;
+
                 case 5:
-                    MenuPrinter.printMenuHeader(option);
                     showStudentsSummary(studentService, scanner);
                     break;
+
                 case 6:
-                    MenuPrinter.printMenuHeader(option);
                     showCoursesSummary(courseService, scanner);
                     break;
+
                 case 7:
-                    MenuPrinter.printMenuHeader(option);
                     showPassedCourses(studentService, scanner);
                     break;
+
                 case 8:
-                System.out.println("\nThank you for using StudentGen. Goodbye!\n");
+                    System.out.println("\nThank you for using StudentGen. Goodbye!\n");
                     System.exit(0);
+
                 default:
-                System.out.println("\nPlease enter a valid option from 1-8\n");
-                break;
+                    System.out.println("Please enter a valid option from 1-8");
             }
 
         }
-        while (option <= 8);
+        while (option >= 0);
     }
 
     /**

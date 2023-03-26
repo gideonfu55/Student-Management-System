@@ -31,8 +31,6 @@ public class MenuPrinter {
     }
 
     public static Student createStudentMenu(Scanner inputScan, PersonValidator studentValidator) throws ParseException, IllegalArgumentException {
-        
-        printMenuHeader(1);
 
         Student student = retreiveStudentInputs(inputScan, studentValidator);
 
