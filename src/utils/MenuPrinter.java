@@ -32,10 +32,7 @@ public class MenuPrinter {
 
     public static Student createStudentMenu(Scanner inputScan, PersonValidator studentValidator) throws ParseException, IllegalArgumentException {
         
-        System.out.println("\n");
-        System.out.println("|-----------------------------------------------|");
-        System.out.println("| . 1 Register Student                          |");
-        System.out.println("|-----------------------------------------------|");
+        printMenuHeader(1);
 
         Student student = retreiveStudentInputs(inputScan, studentValidator);
 
@@ -85,6 +82,55 @@ public class MenuPrinter {
         scanner.nextLine();
 
         scanner.close();
+    }
+
+    public static void printMenuHeader(int option) {
+
+        System.out.println("\n");
+
+        switch (option) {
+            case 1:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 1 Register Student                          |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+
+            case 2:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 2 Find Student                              |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+
+            case 3:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 3 Enroll Student to Course                  |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+
+            case 4:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 4 Grade/Regrade Student                     |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+
+            case 5:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 5 Show Students Summary                     |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+
+            case 6:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 6 Show Courses Summary                      |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+
+            case 7:
+                System.out.println("|-----------------------------------------------|");
+                System.out.println("| . 7 Show Passed Courses (by Student)          |");
+                System.out.println("|-----------------------------------------------|");
+                break;
+        }
     }
     
 }

@@ -33,21 +33,27 @@ public class App {
                     registerStudent(studentService, scanner, studentValidator);
                     break;
                 case 2:
+                    MenuPrinter.printMenuHeader(option);
                     printStudentRecord(studentService, scanner);
                     break;
                 case 3:
+                    MenuPrinter.printMenuHeader(option);
                     enrollCourse(studentService, courseService, scanner);
                     break;
                 case 4:
+                    MenuPrinter.printMenuHeader(option);
                     gradeStudent(studentService, courseService, scanner);
                     break;
                 case 5:
+                    MenuPrinter.printMenuHeader(option);
                     showStudentsSummary(studentService, scanner);
                     break;
                 case 6:
+                    MenuPrinter.printMenuHeader(option);
                     showCoursesSummary(courseService, scanner);
                     break;
                 case 7:
+                    MenuPrinter.printMenuHeader(option);
                     showPassedCourses(studentService, scanner);
                     break;
                 case 8:
@@ -103,7 +109,7 @@ public class App {
         Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student is registered and/or info entered is valid.");
         } else {
             System.out.println("\nStudent found!");
             System.out.println(student);
@@ -131,7 +137,7 @@ public class App {
         Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student is registered and/or info entered is valid.");
             return;
         }
 
@@ -176,14 +182,10 @@ public class App {
      */
     private static void gradeStudent(StudentService studentService, CourseService courseService, Scanner scanner) {
 
-        System.out.println("\n***********");
-        System.out.println("For grading");
-        System.out.println("***********\n");
-
         Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student is registered and/or info entered is valid.");
             return;
         }
 
@@ -316,7 +318,7 @@ public class App {
         Student student = studentService.findStudent(studentName, studentBirthDate);
 
         if (student == null) {
-            System.out.println("\nStudent not found. Please recheck that student info entered is valid.");
+            System.out.println("\nStudent not found. Please recheck that student is registered and/or info entered is valid.");
         } else {
             if (student.getPassedCourses().size() == 0) {
                 System.out.println("\nNo passed courses available. Please grade a course OR enroll student in a course for grading.");
