@@ -234,7 +234,7 @@ public class App {
             double grade = scanner.nextDouble();
 
             if (grade < course.MIN_GRADE || grade > course.MAX_GRADE) {
-                System.out.println("\nSorry, please enter a valid grade between 0.0 & 6.0.");
+                System.out.println("\nSorry, please enter a valid grade between 1.0 & 6.0.");
                 return;
             } else {
                 course.setGrade(grade);
