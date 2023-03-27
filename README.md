@@ -8,7 +8,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 2. Include failed courses option (branched) within selection in Option 7.
 3. Option to add new courses to module. Option to add instructors with relationship to course.
 4. Expanding this into a Full-Stack project with UI and security features.
-5. Refactoring required for 3 layer design.
+5. Refactoring required for 3 layer design - inclusion of repository and rearrangement of methods required.
 
 Things that I tried (hopefully) to improve on:
 
