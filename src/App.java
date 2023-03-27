@@ -271,7 +271,7 @@ public class App {
             System.out.println(studentService + "\n");
         }
 
-        System.out.println("\nEnter any key to return to main menu");
+        System.out.println("Enter any key to return to main menu");
         scanner.next();
         // MenuPrinter.pressEnterToContinue();
 
