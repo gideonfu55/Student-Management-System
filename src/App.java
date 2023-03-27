@@ -60,7 +60,7 @@ public class App {
                     break;
 
                 case 8:
-                    System.out.println("\nThank you for using StudentGen. Goodbye!\n");
+                    System.out.println("Thank you for using StudentGen. Goodbye!\n");
                     System.exit(0);
 
                 default:
