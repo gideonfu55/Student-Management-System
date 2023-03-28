@@ -4,6 +4,7 @@ import java.util.Scanner;
 import model.Course;
 import model.Student;
 import model.validator.PersonValidator;
+import repository.StudentRepository;
 // import repository.StudentRepository;
 import service.CourseService;
 import service.StudentService;
@@ -12,7 +13,6 @@ import utils.MenuPrinter;
 public class App {
     public static void main(String[] args) throws ParseException, IllegalArgumentException {
 
-        // StudentRepository studentRepository = new StudentRepository();
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
         PersonValidator studentValidator = new PersonValidator();

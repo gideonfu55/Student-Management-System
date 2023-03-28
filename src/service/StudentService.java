@@ -9,13 +9,10 @@ import repository.StudentRepository;
 // This class actually combines both the Student 'repository' (with a Student HashMap) and Service layer (with business logic methods) all in one.
 public class StudentService {
 
-    private final HashMap<String, Student> students = new HashMap<>();
-    StudentRepository studentRepository;
+    StudentRepository studentRepository = new StudentRepository();
+    HashMap<String, Student> students = studentRepository.retreiveStudents();
 
-    // public StudentService(StudentRepository studentRepository) {
-    //     this.studentRepository = studentRepository;
-    // }
-
+    // Basis of creating student in the system:
     public void subscribeStudent(Student student) {
         if (!students.containsKey(student.getPersonId())) {
             students.put(student.getPersonId(), student);
@@ -25,6 +22,7 @@ public class StudentService {
         }
     }
 
+    // Basis of retrieving student in the system:
     public Student findStudent(String personId) {
         if (students.containsKey(personId)) {
             Student student = students.get(personId);
@@ -34,6 +32,7 @@ public class StudentService {
         return null;
     }
 
+    // Basis of adding a course (for enrollment) to a student:
     public boolean enrollToCourse(String personId, Course course) {
         if (students.containsKey(personId)) {
             students.get(personId).enrollToCourse(course);
