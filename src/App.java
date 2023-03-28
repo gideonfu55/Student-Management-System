@@ -337,7 +337,7 @@ public class App {
      */
     private static Student getStudentInformation(StudentService studentService, Scanner scanner) {
 
-        System.out.println("\nEnter student's personal ID: ");
+        System.out.println("Enter student's personal ID: ");
         String studentId = scanner.next();
 
         // Student student = studentService.findStudent(studentName, studentBirthDate);

@@ -1,7 +1,5 @@
 package service;
 
-import java.util.*;
-
 import model.Course;
 import model.Student;
 import repository.StudentRepository;
@@ -10,12 +8,11 @@ import repository.StudentRepository;
 public class StudentService {
 
     StudentRepository studentRepository = new StudentRepository();
-    HashMap<String, Student> students = studentRepository.retreiveStudents();
 
     // Basis of creating student in the system:
     public void subscribeStudent(Student student) {
-        if (!students.containsKey(student.getPersonId())) {
-            students.put(student.getPersonId(), student);
+        if (!studentRepository.retreiveStudents().containsKey(student.getPersonId())) {
+            studentRepository.createStudent(student);
             System.out.println("\nStudent has been registered successfully!");
         } else {
             System.out.println("Student is already registered!");
@@ -24,8 +21,8 @@ public class StudentService {
 
     // Basis of retrieving student in the system:
     public Student findStudent(String personId) {
-        if (students.containsKey(personId)) {
-            Student student = students.get(personId);
+        if (studentRepository.retreiveStudent(personId) != null) {
+            Student student = studentRepository.retreiveStudent(personId);
 
             return student;
         }
@@ -34,15 +31,15 @@ public class StudentService {
 
     // Basis of adding a course (for enrollment) to a student:
     public boolean enrollToCourse(String personId, Course course) {
-        if (students.containsKey(personId)) {
-            students.get(personId).enrollToCourse(course);
+        if (studentRepository.retreiveStudent(personId) != null) {
+            studentRepository.retreiveStudent(personId).enrollToCourse(course);
             return true;
         }
         return false;
     }
 
     public boolean studentsRecordEmpty() {
-        if (!students.isEmpty()) {
+        if (!studentRepository.retreiveStudents().isEmpty()) {
             return true;
         }
         return false;
@@ -51,7 +48,7 @@ public class StudentService {
     @Override
     public String toString() {
         String studentsRecord = "";
-        for(Student student: students.values()) {
+        for(Student student: studentRepository.retreiveStudents().values()) {
             studentsRecord += student;
         }
         return studentsRecord;
