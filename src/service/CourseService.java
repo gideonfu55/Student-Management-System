@@ -4,7 +4,6 @@ import model.Course;
 import model.Module;
 import repository.CourseRepository;
 
-// Combination of CourseService methods and CourseRepository
 public class CourseService {
 
     CourseRepository courseRepository = new CourseRepository();

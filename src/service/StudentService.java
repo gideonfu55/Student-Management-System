@@ -4,7 +4,6 @@ import model.Course;
 import model.Student;
 import repository.StudentRepository;
 
-// This class actually combines both the Student 'repository' (with a Student HashMap) and Service layer (with business logic methods) all in one.
 public class StudentService {
 
     StudentRepository studentRepository = new StudentRepository();
@@ -23,7 +22,6 @@ public class StudentService {
     public Student findStudent(String personId) {
         if (studentRepository.retrieveStudent(personId) != null) {
             Student student = studentRepository.retrieveStudent(personId);
-
             return student;
         }
         return null;
