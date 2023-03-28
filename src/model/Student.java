@@ -9,7 +9,6 @@ public class Student extends Person implements Evaluation {
 
     public Student(String personId, String name, String email, Date birthDate) {
         super(personId, name, email, birthDate);
-
         // Create an empty enrolledCourses ArrayList for each student object to update his/her enrolled courses:
         enrolledCourses = new ArrayList<>();
     }
