@@ -2,18 +2,19 @@ package service;
 
 import model.Course;
 import model.Module;
+import repository.CourseRepository;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 // Combination of CourseService methods and CourseRepository
 public class CourseService {
 
-    private final Map<String, Course> courses = new LinkedHashMap<>();
+    CourseRepository courseRepository = new CourseRepository();
+    Map<String, Course> courses = courseRepository.retrieveCourses();
 
     public CourseService() {
     
-        //Multiple courses belongs to a Module
+        //Multiple courses belongs to each Module: INTRO-CS -- Introduction to Computer Science
         Module moduleCS = new Module("INTRO-CS", "Introduction to Computer Science", 
                                      "Introductory module for the generation technical programs");
 
@@ -26,6 +27,7 @@ public class CourseService {
         registerCourse(new Course("INTRO-CS-7", "Agile Software Development with SCRUM", 9, moduleCS));
 
 
+        // Multiple courses belongs to each Module: INTRO-WEB -- Web Development Fundamentals
         Module moduleWebDev = new Module("INTRO-WEB", "Web Development Fundamentals",
                                          "Introduction to fundamentals of web development");
 

@@ -4,8 +4,6 @@ import java.util.Scanner;
 import model.Course;
 import model.Student;
 import model.validator.PersonValidator;
-import repository.StudentRepository;
-// import repository.StudentRepository;
 import service.CourseService;
 import service.StudentService;
 import utils.MenuPrinter;
