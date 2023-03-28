@@ -4,18 +4,14 @@ import java.util.*;
 
 public class Student extends Person implements Evaluation {
 
-    // In this case, Student and Course has a one-to-many relationship - a student can be enrolled in many courses.
+    // In this case, Student and Course has a one-to-many relationship (one directional) - a student can be enrolled in many courses. This is a simplified way of forming the relationship.
     private List<Course> enrolledCourses;
 
-    public Student(String name, String email, Date birthDate) {
-        super(name, email, birthDate);
+    public Student(String personId, String name, String email, Date birthDate) {
+        super(personId, name, email, birthDate);
 
         // Create an empty enrolledCourses ArrayList for each student object to update his/her enrolled courses:
         enrolledCourses = new ArrayList<>();
-    }
-
-    public Student(Student Source) {
-        super(Source);
     }
 
     public boolean enrollToCourse(Course course) {

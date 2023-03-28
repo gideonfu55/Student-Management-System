@@ -4,6 +4,7 @@ import java.util.Scanner;
 import model.Course;
 import model.Student;
 import model.validator.PersonValidator;
+// import repository.StudentRepository;
 import service.CourseService;
 import service.StudentService;
 import utils.MenuPrinter;
@@ -11,6 +12,7 @@ import utils.MenuPrinter;
 public class App {
     public static void main(String[] args) throws ParseException, IllegalArgumentException {
 
+        // StudentRepository studentRepository = new StudentRepository();
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
         PersonValidator studentValidator = new PersonValidator();
@@ -160,7 +162,7 @@ public class App {
 
         System.out.println("\nCourse selected for enrollment: " + "\n" + course);
 
-        if (studentService.enrollToCourse(student.getName(), student.getBirthDate(), new Course(course))) {
+        if (studentService.enrollToCourse(student.getPersonId(), new Course(course))) {
             System.out.println("\n" + student.getName() + " has been enrolled successfully to: \n<" + course.getCourseId() + "> " + course.getName());
         } else {
             System.out.println("Sorry, the course enrollment was unsuccessful.");
@@ -310,14 +312,7 @@ public class App {
      */
     private static void showPassedCourses(StudentService studentService, Scanner scanner) {
 
-        System.out.println("Enter student's name: ");
-        scanner.nextLine();
-        String studentName = scanner.nextLine();
-
-        System.out.println("\nEnter student's birth date: ");
-        String studentBirthDate = scanner.next();
-
-        Student student = studentService.findStudent(studentName, studentBirthDate);
+        Student student = getStudentInformation(studentService, scanner);
 
         if (student == null) {
             System.out.println("\nStudent not found. Please recheck that student is registered and/or info entered is valid.");
@@ -344,14 +339,11 @@ public class App {
      */
     private static Student getStudentInformation(StudentService studentService, Scanner scanner) {
 
-        System.out.println("Enter student's name: ");
-        scanner.nextLine();
-        String studentName = scanner.nextLine();
+        System.out.println("\nEnter student's personal ID: ");
+        String studentId = scanner.next();
 
-        System.out.println("\nEnter student's birth date: ");
-        String studentBirthDate = scanner.next();
-
-        Student student = studentService.findStudent(studentName, studentBirthDate);
+        // Student student = studentService.findStudent(studentName, studentBirthDate);
+        Student student = studentService.findStudent(studentId);
         return student;
 
     }

@@ -7,13 +7,18 @@ import java.util.Date;
 abstract public class Person {
 
     private static int count = 0;
-    private final String id;
+    private final String sysId;
+    private final String personId;
     private final String name;
     private final String email;
     private final Date birthDate;
 
     // A protected constructor can only be accessed only by the subclasses in other package or any class within the package of the protected class.
-    protected Person(String name, String email, Date birthDate) {
+    protected Person(String personId, String name, String email, Date birthDate) {
+        
+        if (personId == null || personId.isBlank()) {
+            throw new IllegalArgumentException("Personal ID cannot be null or blank.");
+        }
 
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Name cannot be null or blank.");
@@ -28,25 +33,31 @@ abstract public class Person {
         }
 
         count++;
-        this.id = "000" + Integer.toString(count);
+        this.sysId = "000" + Integer.toString(count);
+        this.personId = personId;
         this.name = name;
         this.email = email + "@mymail.generation.edu.sg";
         this.birthDate = birthDate;
     }
 
     protected Person(Person source) {
-        this.id = source.id;
+        this.sysId = source.sysId;
+        this.personId = source.personId;
         this.name = source.name;
         this.email = source.email;
         this.birthDate = source.birthDate;
     }
 
-    public String getId() {
-        return id;
+    public String getSysId() {
+        return sysId;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getPersonId() {
+        return this.personId;
     }
 
     public String getEmail() {
@@ -61,7 +72,8 @@ abstract public class Person {
     @Override
     public String toString() {
         return "{" +
-            " id='" + getId() + "'" +
+            " sysId='" + getSysId() + "'" +
+            ", personId='" + getPersonId() + "'" +
             ", name='" + getName() + "'" +
             ", email='" + getEmail() + "'" +
             ", birthDate='" + getBirthDate() + "'" +

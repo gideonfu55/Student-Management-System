@@ -42,6 +42,9 @@ public class MenuPrinter {
 
     public static Student retreiveStudentInputs(Scanner inputScan, PersonValidator studentValidator) throws ParseException, IllegalArgumentException {
 
+        System.out.println("| Enter student's personal ID:                  |");
+        String personId = inputScan.next();
+
         System.out.println("| Enter student's name (all uppercase):         |");
         inputScan.nextLine();
         String name = inputScan.nextLine();
@@ -71,7 +74,7 @@ public class MenuPrinter {
             }
         }
 
-        return new Student(name, email, birthDate);
+        return new Student(personId, name, email, birthDate);
     }
 
     public static void pressEnterToContinue() {

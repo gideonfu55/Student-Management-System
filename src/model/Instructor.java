@@ -10,8 +10,8 @@ public class Instructor extends Person {
 
     private final List<Course> coursesInstructed = new ArrayList<>();
 
-    protected Instructor(String name, String email, Date birthDate) {
-        super(name, email, birthDate);
+    protected Instructor(String personId, String name, String email, Date birthDate) {
+        super(personId, name, email, birthDate);
     }
 
     public int getExperienceMonths() {
