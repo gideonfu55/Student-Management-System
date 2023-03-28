@@ -271,8 +271,10 @@ public class App {
             System.out.println(studentService + "\n");
         }
 
-        System.out.println("Enter any key to return to main menu");
-        scanner.next();
+        System.out.println("\nPress Enter to return to main menu");
+        scanner.nextLine();
+        scanner.nextLine();
+
         // MenuPrinter.pressEnterToContinue();
 
     }
@@ -291,8 +293,9 @@ public class App {
 
         courseService.showSummary();
 
-        System.out.println("\nEnter any key to return to main menu");
-        scanner.next();
+        System.out.println("\nPress Enter to return to main menu");
+        scanner.nextLine();
+        scanner.nextLine();
 
         // MenuPrinter.pressEnterToContinue();
     }

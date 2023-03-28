@@ -81,6 +81,7 @@ public class MenuPrinter {
         System.out.println("\nPress \"ENTER\" to continue...");
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
+        scanner.nextLine();
 
         scanner.close();
     }
