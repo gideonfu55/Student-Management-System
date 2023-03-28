@@ -13,7 +13,7 @@ public class CourseRepository {
     courses.put(course.getCourseId(), course);
   }
 
-  public Course retreiveCourse(String courseId) {
+  public Course retrieveCourse(String courseId) { 
     return courses.get(courseId);
   }
 

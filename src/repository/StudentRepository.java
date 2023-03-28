@@ -12,11 +12,11 @@ public class StudentRepository {
     this.students.put(student.getPersonId(), student);
   }
 
-  public Student retreiveStudent(String id) {
+  public Student retrieveStudent(String id) {
     return this.students.get(id);
   }
 
-  public HashMap<String, Student> retreiveStudents() {
+  public HashMap<String, Student> retrieveStudents() {
     return students;
   }
 

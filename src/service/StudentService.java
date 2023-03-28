@@ -11,7 +11,7 @@ public class StudentService {
 
     // Basis of creating student in the system:
     public void subscribeStudent(Student student) {
-        if (!studentRepository.retreiveStudents().containsKey(student.getPersonId())) {
+        if (!studentRepository.retrieveStudents().containsKey(student.getPersonId())) {
             studentRepository.createStudent(student);
             System.out.println("\nStudent has been registered successfully!");
         } else {
@@ -21,8 +21,8 @@ public class StudentService {
 
     // Basis of retrieving student in the system:
     public Student findStudent(String personId) {
-        if (studentRepository.retreiveStudent(personId) != null) {
-            Student student = studentRepository.retreiveStudent(personId);
+        if (studentRepository.retrieveStudent(personId) != null) {
+            Student student = studentRepository.retrieveStudent(personId);
 
             return student;
         }
@@ -31,15 +31,15 @@ public class StudentService {
 
     // Basis of adding a course (for enrollment) to a student:
     public boolean enrollToCourse(String personId, Course course) {
-        if (studentRepository.retreiveStudent(personId) != null) {
-            studentRepository.retreiveStudent(personId).enrollToCourse(course);
+        if (studentRepository.retrieveStudent(personId) != null) {
+            studentRepository.retrieveStudent(personId).enrollToCourse(course);
             return true;
         }
         return false;
     }
 
     public boolean studentsRecordEmpty() {
-        if (!studentRepository.retreiveStudents().isEmpty()) {
+        if (!studentRepository.retrieveStudents().isEmpty()) {
             return true;
         }
         return false;
@@ -48,7 +48,7 @@ public class StudentService {
     @Override
     public String toString() {
         String studentsRecord = "";
-        for(Student student: studentRepository.retreiveStudents().values()) {
+        for(Student student: studentRepository.retrieveStudents().values()) {
             studentsRecord += student;
         }
         return studentsRecord;

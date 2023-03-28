@@ -4,13 +4,10 @@ import model.Course;
 import model.Module;
 import repository.CourseRepository;
 
-import java.util.Map;
-
 // Combination of CourseService methods and CourseRepository
 public class CourseService {
 
     CourseRepository courseRepository = new CourseRepository();
-    Map<String, Course> courses = courseRepository.retrieveCourses();
 
     public CourseService() {
     
@@ -42,20 +39,20 @@ public class CourseService {
     }
 
     public void registerCourse(Course course) {
-        courses.put(course.getCourseId(), course);
+        courseRepository.createCourse(course);
     }
 
     public Course getCourseById(String courseId) {
-        if (courses.containsKey(courseId)) {
-            return courses.get(courseId);
+        if (courseRepository.retrieveCourse(courseId) != null) {
+            return courseRepository.retrieveCourse(courseId);
         }
         return null;
     }
 
     public void showSummary() {
         System.out.println("\nAvailable Courses:");
-        for (String key : courses.keySet()) {
-            Course course = courses.get(key);
+        for (String key : courseRepository.retrieveCourses().keySet()) {
+            Course course = courseRepository.retrieveCourses().get(key);
             System.out.println(course);
         }
     }
