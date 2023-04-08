@@ -8,7 +8,6 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 2. Include failed courses option (branched) within selection in Option 7.
 3. Option to add new courses to module. Option to add instructors with relationship to course.
 4. Expanding this into a Full-Stack project with UI and security features.
-5. Refactoring required for 3 layer design - inclusion of repository and rearrangement of methods required.
 
 Things that I tried (hopefully) to improve on:
 
@@ -16,3 +15,9 @@ Things that I tried (hopefully) to improve on:
 2. Use a more declarative approach in writing.
 
 Specific changes:
+1. Refactored into 3 layer design.
+2a. Added specific input validation requirements for Student particulars for adding Student object.
+2b. Include Runtime Error(s) handling for inputs on menu entries + inputs for Student particulars and Grades.
+3. Added feature to check for ungraded courses for student upon retrieving an enrolled student.
+4. Fixed a previous Reference Trap problem for enrolled courses in Students, where changing one grade changes for all.
+5. Improved on presentation of information.
