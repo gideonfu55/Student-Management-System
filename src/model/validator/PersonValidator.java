@@ -6,6 +6,7 @@ public class PersonValidator {
   
   private static final String regexNameCheck = "^[A-Z\s-]+$";
   private static final String regexEmailCheck = "^(.+)@(\\S+)$";
+  private static final String regexIdCheck = "";
 
   /*
    * nameValidator rejects name input on the following conditions:
