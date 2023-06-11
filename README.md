@@ -19,3 +19,7 @@ Specific changes:
 6. Added feature to check for ungraded courses for student upon retrieving an enrolled student.
 7. Fixed a previous Reference Trap problem for enrolled courses in Students, where changing one grade changes for all.
 8. Improved on presentation of information.
+
+Features:
+
+- Student Registration:
