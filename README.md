@@ -48,6 +48,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 - **Show Passed Courses By Student**
 
     **If student is not enrolled OR doesn't have any graded/passed courses:**
+    ![passed_coursesA](https://github.com/gideonfu55/student-management-system/assets/94817218/2f92ee85-8339-4ccf-90dd-c4da78c4d074)
 
     **With passed courses (with grades > 3.0):**
 
