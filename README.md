@@ -25,7 +25,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
 - **Enroll Student to Course**
 
-    ![student-enroll-course](https://github.com/gideonfu55/student-management-system/assets/94817218/31d68d45-2847-4bf2-8e71-dc550f452b86)
+    ![student-enroll-course](https://github.com/gideonfu55/student-management-system/assets/94817218/48a1a700-cf15-4084-8ec3-f3631a1b95f7)
 
 - **Grade/Regrade a Student**
 
