@@ -37,3 +37,5 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
     ![student_summary_passedcourses](https://github.com/gideonfu55/student-management-system/assets/94817218/559234f8-e7db-4ab1-a04d-759756ff587b)
 
 - **Show Courses Summary**
+
+    ![courses-summary](https://github.com/gideonfu55/student-management-system/assets/94817218/57017e3f-96f4-472b-9295-b07a652a4cdc)
