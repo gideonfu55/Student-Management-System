@@ -38,7 +38,10 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
 - **Show Student Summary & Show Passed Courses By Student**
 
-    ![student_summary_passedcourses](https://github.com/gideonfu55/student-management-system/assets/94817218/559234f8-e7db-4ab1-a04d-759756ff587b)
+    Student Summary and if Student is not enrolled OR doesn't have any graded/passed courses:
+
+    Show Passed Courses By Student:
+    
 
 - **Show Courses Summary**
 
