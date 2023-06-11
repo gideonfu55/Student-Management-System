@@ -28,3 +28,6 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
     ![student-enroll-course](https://github.com/gideonfu55/student-management-system/assets/94817218/d69cdaa2-a688-4c44-a5bf-019c78a95497)
 
 - Grade/Regrade a Student
+
+    ![student-gradeA](https://github.com/gideonfu55/student-management-system/assets/94817218/e3033b60-f0f2-4e89-8e9e-4b8ee79431f8)
+    ![student-gradeB](https://github.com/gideonfu55/student-management-system/assets/94817218/31f17bd4-14a2-4787-a786-70a52405357c)
