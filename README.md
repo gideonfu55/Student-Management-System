@@ -29,20 +29,25 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
 - **Grade/Regrade a Student**
 
+    **Grading a student enrolled in a course:**
+
     ![student-gradeA](https://github.com/gideonfu55/student-management-system/assets/94817218/e3033b60-f0f2-4e89-8e9e-4b8ee79431f8)
+
+    **Regrading a student (with exception handling):**
+
     ![student-gradeB](https://github.com/gideonfu55/student-management-system/assets/94817218/31f17bd4-14a2-4787-a786-70a52405357c)
 
     **Grading a student not enrolled in any course:**
 
     ![student-gradeC](https://github.com/gideonfu55/student-management-system/assets/94817218/a3e7475d-abea-4aac-87f7-9bf699842c37)
 
-- **Show Student Summary & Show Passed Courses By Student**
+- **Show Passed Courses By Student**
 
-    **Student Summary and if Student is not enrolled OR doesn't have any graded/passed courses:**
+    **If student is not enrolled OR doesn't have any graded/passed courses:**
 
     ![summary_ungraded](https://github.com/gideonfu55/student-management-system/assets/94817218/e3e526d4-3bcd-4828-a38d-0fab7994ebc4)
 
-    **Show Passed Courses By Student:**
+    **With passed courses (with grades > 3.0):**
 
     ![passed_courses](https://github.com/gideonfu55/student-management-system/assets/94817218/e42e502d-f543-468b-b0d5-3229d9b172b8)
 
