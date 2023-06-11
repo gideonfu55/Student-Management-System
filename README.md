@@ -45,7 +45,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
     ![image](https://github.com/gideonfu55/student-management-system/assets/94817218/089b08ef-8186-4ee9-bb51-04b2cfcba150)
 
-- **Show Passed Courses By Student**
+- **Show Passed Courses By Student (details from Student Summary above)**
 
     **If student is not enrolled OR doesn't have any graded/passed courses:**
 
