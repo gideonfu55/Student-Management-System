@@ -19,7 +19,9 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
 **Features:**
 
-- Student Registration
+- Register and Find Student (with validations)
 
     ![student-register](https://github.com/gideonfu55/student-management-system/assets/94817218/a92d5725-a32f-428e-9a3a-d3d109c39bfc)
 
+- Enroll Student to Course
+  
