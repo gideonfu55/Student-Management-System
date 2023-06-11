@@ -40,7 +40,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
     Student Summary and if Student is not enrolled OR doesn't have any graded/passed courses:
     
-    
+    ![summary_ungraded](https://github.com/gideonfu55/student-management-system/assets/94817218/e3e526d4-3bcd-4828-a38d-0fab7994ebc4)
 
     Show Passed Courses By Student:
     
