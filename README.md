@@ -33,7 +33,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
     ![student-gradeB](https://github.com/gideonfu55/student-management-system/assets/94817218/31f17bd4-14a2-4787-a786-70a52405357c)
 
     **Grading a student not enrolled in any course:**
-    
+
     ![student-gradeC](https://github.com/gideonfu55/student-management-system/assets/94817218/a3e7475d-abea-4aac-87f7-9bf699842c37)
 
 - **Show Student Summary & Show Passed Courses By Student**
