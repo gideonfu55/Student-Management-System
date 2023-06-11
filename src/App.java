@@ -319,7 +319,7 @@ public class App {
             System.out.println("\nStudent not found. Please recheck that student is registered and/or info entered is valid.");
         } else {
             if (student.getPassedCourses().size() == 0) {
-                System.out.println("\nNo passed courses available. Please grade a course OR enroll student in a course for grading.");
+                System.out.println("\nNo passed courses available. Please grade/regrade (> 3.0 to pass) a course OR enroll student in a course for grading.");
             } else {
                 System.out.println("\nList of courses " + student.getName() + " has passed: ");
                 System.out.println(student.printEachCourse(student.getPassedCourses()));
