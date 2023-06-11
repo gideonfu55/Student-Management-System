@@ -26,3 +26,5 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 - Enroll Student to Course
 
     ![student-enroll-course](https://github.com/gideonfu55/student-management-system/assets/94817218/d69cdaa2-a688-4c44-a5bf-019c78a95497)
+
+- Grade/Regrade a Student
