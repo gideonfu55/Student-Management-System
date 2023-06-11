@@ -51,6 +51,7 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
     ![passed_coursesA](https://github.com/gideonfu55/student-management-system/assets/94817218/2f92ee85-8339-4ccf-90dd-c4da78c4d074)
 
     **With passed courses (with grades > 3.0):**
+    ![passed_coursesB](https://github.com/gideonfu55/student-management-system/assets/94817218/42286c60-3d08-4e04-9494-f2247f02e7ea)
 
 - **Show Courses Summary**
 
