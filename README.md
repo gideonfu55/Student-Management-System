@@ -24,4 +24,5 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
     ![student-register](https://github.com/gideonfu55/student-management-system/assets/94817218/a92d5725-a32f-428e-9a3a-d3d109c39bfc)
 
 - Enroll Student to Course
-  
+
+    ![student-enroll-course](https://github.com/gideonfu55/student-management-system/assets/94817218/d69cdaa2-a688-4c44-a5bf-019c78a95497)
