@@ -41,6 +41,8 @@ Reworked on the Java Assessment which I had during my bootcamp to familiarize wi
 
     ![student-gradeC](https://github.com/gideonfu55/student-management-system/assets/94817218/a3e7475d-abea-4aac-87f7-9bf699842c37)
 
+- **Show Student Summary**
+
 - **Show Passed Courses By Student**
 
     **If student is not enrolled OR doesn't have any graded/passed courses:**
